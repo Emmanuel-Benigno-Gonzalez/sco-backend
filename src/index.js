@@ -1,7 +1,8 @@
 import express from "express"
 import {SERVER_PORT} from "./config.js"
-import usersRoutes from './routes/users.routes.js';
+import opsRoutes from './routes/ops.routes.js';
 import authRoutes from './routes/auth.routes.js'
+import usersRoutes from './routes/users.routes.js'
 import cors from 'cors';
 import { corsConfig } from './config/cors.js';
 
@@ -13,7 +14,8 @@ app.use(cors(corsConfig));
 //Routing
 app.use(express.json());
 app.use('/api/auth', authRoutes );
-app.use('/api', usersRoutes );
+app.use('/api/ops', opsRoutes );
+app.use('/api/users', usersRoutes)
 
 app.listen(port);
 
