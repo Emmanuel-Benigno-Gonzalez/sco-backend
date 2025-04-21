@@ -58,7 +58,9 @@ export const createOps = async (req, res) => {
         Observaciones
     } = req.body;
 
-    const ID_Usuario = req.user_id
+    //const ID_Usuario = req.user_id
+    const ID_Usuario = 1
+
 
     try {
 

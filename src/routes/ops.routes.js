@@ -10,8 +10,8 @@ import { authenticate } from '../middleware/auth.js'
 
 const router = Router();
 
-router.post('/create', authenticate, isHead, createOps);
-router.get('/findOpsbyDate', authenticate, findOpsbyDate);
+router.post('/create', createOps);
+router.get('/findOpsbyDate', findOpsbyDate);
 router.delete('/deleteOpsbyId/:ID_Registro',authenticate, deleteOpsbyId);
 router.put('/updateOpsbyId/:ID_Registro',authenticate, updateOpsbyId);
 
